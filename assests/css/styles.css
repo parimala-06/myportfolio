@@ -359,7 +359,9 @@ img{
 }
 @media screen and (min-width: 768px){
     body{
-        margin: 0;
+        margin: 0;    
+        overflow: overlay;
+
     }
     .section{
         padding: 4rem;
