@@ -184,11 +184,12 @@
             <section class="contact section" id="contact">
                 <h2 class="section_title" data-aos="fade-down" data-aos-delay="50">Contact</h2>
                 <div class="contact_container bd_grid">
-                    <form action="#" class="contact_form">
-                        <input type="text" placeholder="Name" class="control_input" data-aos="fade-down" data-aos-delay="50">
-                        <input type="mail" placeholder="Email" class="control_input"data-aos="fade-down" data-aos-delay="100">
-                        <textarea name="" id="" cols="0" rows="10" class="control_input" data-aos="fade-down" data-aos-delay="150"></textarea>
-                        <input type="button" value="Send" class="control_button button" data-aos="fade-down" data-aos-delay="200">
+                    <form method="post" 
+                    class="contact_form" onsubmit="sendEmail(); reset(); return flase;">
+                        <input type="text" id="name" placeholder="Name" class="control_input" data-aos="fade-down" data-aos-delay="50">
+                        <input type="mail" id="email" placeholder="Email" class="control_input"data-aos="fade-down" data-aos-delay="100">
+                        <textarea name="" id="text" cols="0" rows="10" class="control_input" data-aos="fade-down" data-aos-delay="150"></textarea>
+                        <button type="submit" class="control_button button" data-aos="fade-down" data-aos-delay="200">Send</button>
                     </form>
                 </div>
             </section>
@@ -220,6 +221,23 @@
                 duration: 1200,
                 once: false
             });
+        </script>
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                Host : "smtp.gmail.com",
+                Username : "mrgarfieldhere@gmail",
+                Password : "Pari1506",
+                To : 'parimala1517@gmail.com',
+                From : document.getElementById("Email").value,
+                Subject : "portfolio contact form",
+                Body : "enquiry"
+            }).then(
+            message => alert(message)
+            );
+            }
         </script>
     </body>
 </html>
