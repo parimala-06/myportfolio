@@ -616,6 +616,9 @@ img{
             outline: none;
             margin-bottom: var(--md-4);
         }
+        .contact_form{
+            margin: auto;
+        }
         .control_button{
             display: block;
             color: #fff;
