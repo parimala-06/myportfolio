@@ -216,8 +216,8 @@ img{
 .section{
     padding-top: 3rem;
     padding-bottom: 2rem;
-
 }
+    
 .section_title{
     position: relative;
     font-size: var(--h2-font-size);
@@ -228,17 +228,7 @@ img{
     margin-right: auto;
     text-align: center;
 }
-.section_title::after{
-    position: absolute;
-    content: "";
-    width: 64px;
-    height: 0.18rem;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 2rem;
-    background-color: var(--first-color);
-}
+
 /* About section */
 .about_container{
     row-gap: 2rem;
