@@ -587,13 +587,14 @@ img{
         }
         /* Work */
         .work{
+            width: 100%;
             text-align: center;
         }
         .work_container{
             row-gap: 2rem;
+            column-gap: 3.5rem;
         }
         .work_img{
-            
             box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
             border-radius: 0.5rem;     
         }
@@ -617,7 +618,9 @@ img{
             margin-bottom: var(--md-4);
         }
         .contact_form{
-            margin: auto;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
         }
         .control_button{
             display: block;
